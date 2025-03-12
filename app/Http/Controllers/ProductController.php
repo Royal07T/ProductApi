@@ -10,7 +10,7 @@ class ProductController extends Controller
 {
     public function index(): JsonResponse
     {
-        return response()->json(Product::with('category')->paginate(10));
+        return response()->json(Product::with('category')->paginate(5));
     }
 
     public function store(Request $request): JsonResponse
